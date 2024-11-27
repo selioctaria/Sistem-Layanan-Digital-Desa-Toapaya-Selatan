@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registrasi</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo Topsela">
+                </div>
+            <div class="header-text">
+                <h2>Desa Toapaya Selatan</h2>
+                <p>Kabupaten Bintan</p>
+                </div>
+            <nav class="navigation">
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </div>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Belum Memiliki Akun? <a href="#" class="register-link">Daftar</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="form-box register">
+            <h2>Daftar</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Nama Lengkap</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Nomor Kartu Keluarga</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>NIK KTP</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Nomor Telepon</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Saya setuju dengan syarat & ketentuan</label>
+                    
+                </div>
+                <button type="submit" class="btn">Daftar</button>
+                <div class="login-register">
+                    <p>Sudah Memiliki Akun? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
