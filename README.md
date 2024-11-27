@@ -1,6 +1,6 @@
 # Website Layanan Digital Desa Toapaya Selatan
 
-Website ini dirancang untuk mendukung layanan digital di Desa Toapaya Selatan, Kabupaten Bintan. Fitur utama dari website ini meliputi **registrasi akun** dan **login pengguna** untuk mempermudah proses administrasi digital masyarakat desa, dan halaman beranda
+Website ini dirancang untuk mendukung layanan digital di Desa Toapaya Selatan, Kabupaten Bintan. Fitur utama dari website ini meliputi **registrasi akun** dan **login pengguna** untuk mempermudah proses administrasi digital masyarakat desa, dan **halaman beranda**
 
 ## 📋 Fitur Utama
 - **Halaman Registrasi**: Form pendaftaran dengan input untuk data pengguna seperti Nama Lengkap, Nomor Kartu Keluarga, NIK KTP, Nomor Telepon, Email, dan Password.
