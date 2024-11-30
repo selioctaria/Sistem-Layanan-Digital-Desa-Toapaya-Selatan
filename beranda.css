@@ -1,0 +1,139 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo dan Teks */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px; /* Ukuran logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+.text-container h1 {
+    font-size: 20px; /* Ukuran tulisan Desa Toapaya Selatan */
+    color: #333;
+    margin: 0;
+}
+
+.text-container p {
+    font-size: 14px; /* Ukuran tulisan Kabupaten Bintan */
+    color: #666;
+    margin: 0;
+}
+
+/* Tombol di sudut kanan atas */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .login {
+    background-color: #ffcc00;
+}
+
+.buttons .login:hover {
+    background-color: #e6b800;
+}
+
+.buttons .register {
+    background-color: #28a745;
+}
+
+.buttons .register:hover {
+    background-color: #218838;
+}
+
+/* Gambar Utama */
+.main-image {
+    position: relative;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.main-image img {
+    width: 100%; /* Perbesar ukuran gambar */
+    max-width: 1500px; /* Maksimal lebar */
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 0px; /* Tambahkan sedikit rounded pada gambar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan gambar */
+}
+
+/* Teks Sambutan */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.welcome-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.welcome-text p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Background Hijau untuk Kata DATANG */
+.highlight {
+    background-color: #28a745;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}

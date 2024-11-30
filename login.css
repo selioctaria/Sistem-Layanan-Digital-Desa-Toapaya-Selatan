@@ -1,0 +1,199 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Opsional untuk mencegah scroll */
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure header stays visible above background */
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ukuran logo */
+    width: 50px; /* Membuat logo berbentuk lingkaran */
+    border-radius: 50%; /* Membuat elemen menjadi lingkaran */
+    margin-right: 15px;
+    object-fit: cover; /* Menyesuaikan gambar agar tetap rapi dalam lingkaran */
+}
+
+.header-text {
+    color: white;
+    line-height: 1.2;
+}
+
+.header-text h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('image.png') no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-box button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.login-box a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for Alternative Login */
+.alternative-login {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.alternative-login .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.alternative-login .icons a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.alternative-login .icons img {
+    width: 30px; /* Default size for Google */
+    height: 30px;
+    object-fit: cover;
+}
+
+.alternative-login .icons a.google img {
+    width: 30px; /* Google logo size */
+    height: 30px;
+}
+
+.alternative-login .icons a.facebook img {
+    width: 33px; /* Larger size for Facebook */
+    height: 33px;
+}
+
+.alternative-login .icons a:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Help Button */
+.help-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.help-button:hover {
+    background-color: #218838;
+}
