@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Layanan Digital Desa Toapaya Selatan</title>
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <!-- Logo di title -->
+  <link rel="icon" href="logo.png" type="image/jpeg">
+
+  <style>
+    .form-container {
+      background: #dce1eb;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+
+    .form-container-2 {
+      background: #eddf9b;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 3rem;
+    }
+
+    .form-container-3 {
+      background: #dce1eb;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    h4 {
+      margin-bottom: 1rem;
+      color: #333;
+      text-align: center;
+      font-size: 20px;
+    }
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+    .input-group label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    }
+
+    .input-group input,
+    .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3e3e3e;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus {
+      border-color: #007bff;
+    }
+    .btn-submit {
+      display: block;
+      width: 50%;
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 2rem;
+      align-items: right;
+    }
+
+    .btn-submit:hover {
+      background-color: #0056b3;
+    }
+
+    .form-group {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #545252;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <img src="logo.jpg" alt="Logo">
+          <h2 class="text-muted">Desa Toa<span class="danger">paya Selatan</span></h2>
+        </div>
+        <div class="close" id="close-btn"></div>
+      </div>
+
+      <div class="sidebar">
+        <a href="#">
+          <span class="material-icons-sharp">home</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="user-pengajuan-surat.html" class="active">
+          <span class="material-icons-sharp">create_new_folder</span>
+          <h3>Pengajuan Surat</h3>
+        </a>
+        <a href="user-pengaduan.html">
+          <span class="material-icons-sharp">contact_emergency</span>
+          <h3>Pengaduan</h3>
+        </a>
+        <a href="#">
+            <span class="material-icons-sharp">history</span>
+            <h3>Riwayat</h3>
+          </a>
+        <a href="#">
+          <span class="material-icons-sharp">location_city</span>
+          <h3>Tentang Desa</h3>
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">person</span>
+          <h3>Profile</h3>
+        </a>
+        <a href="#" id="logout">
+          <span class="material-icons-sharp">logout</span>
+          <h3>Keluar</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-container">
+        <h2>Formulir Pengajuan Surat</h2>
+        <div class="form-container">
+            <h4>Data Pemohon</h4>
+            <form action="submit_pengajuan_surat.php" method="POST">
+              <div class="input-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+              </div>
+              <div class="input-group">
+                <label for="number">Nomor Induk Kependudukan</label>
+                <input type="number" id="number" name="number" placeholder="Masukkan Nomor Induk Kependudukan (NIK) Anda" required>
+              </div>
+              <div class="input-group">
+                <label for="number">Nomor Kartu Keluarga</label>
+                <input type="number" id="number" name="number" placeholder="Masukkan Nomor Kartu Keluarga Anda" required>
+              </div>
+              <div class="input-group">
+                <label for="address">Tempat/Tanggal Lahir</label>
+                <input type="text" id="address" name="address" placeholder="Misalnya: Jakarta, 01 Januari 1990" required>
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Masukkan email Anda (Misal: toapaya@gmail.com)" required>
+              </div>
+              <div class="input-group">
+                <label for="telepon">No. Telepon</label>
+                <input type="number" id="telepom" name="telepon" placeholder="Masukkan nomor telepon/WA Anda" required>
+              </div>
+              <div class="input-group">
+                <label for="pekerjaan">Pekerjaan</label>
+                <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Masukkan Pekerjaan Anda" required>
+              </div>
+              <div class="input-group">
+                <label for="complaint">Alamat Lengkap</label>
+                <textarea id="address" name="address" rows="5" placeholder="Masukkan Alamat Anda" required></textarea>
+              </div>
+            </form>
+          </div>
+
+        <div class="form-container-2">
+            <h4>Jenis Surat yang Diajukan</h4>
+            <form action="submit_pengajuan_surat.php" method="POST">
+                <div class="form-group">
+                    <label for="surat">Surat yang Diajukan</label>
+                    <select id="surat" name="surat" required>
+                        <option value="#">Pilih</option>
+                        <option value="#">1. Surat Pengantar Pembuatan KTP</option>
+                        <option value="#">2. Surat Pengantar Pembuatan KTP</option>
+                        <option value="#">3. Surat Pengantar Pindah Domisili</option>
+                        <option value="#">4. Surat Pengantar Nikah (N1, N2, N4)</option>
+                        <option value="#">5. Surat Pengantar SKCK (Surat Keterangan Catatan Kepolisian)</option>
+                        <option value="#">6. Surat Pengantar Surat Keterangan Tidak Mampu (SKTM)</option>
+                        <option value="#">7. Surat Pengantar Keterangan Usaha (SKU)</option>
+                        <option value="#">8. Surat Pengantar Ahli Waris</option>
+                        <option value="#">9. Surat Pengantar Beasiswa</option>
+                        <option value="#">10. Surat Pengantar Keterangan Kelahiran</option>
+                        <option value="#">11. Surat Pengantar Keterangan Kematian</option>
+                        <option value="#">12. Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lainnya">Lainnya</label>
+                    <input type="text" id="lainnya" name="lainnya" placeholder="Masukkan Surat Pengantar Lainnya" required>
+                </div>
+                <div class="form-group">
+                    <label for="surat">Keperluan Pengajuan Surat</label>
+                    <select id="surat" name="surat" required>
+                        <option value="#">Pilih</option>
+                        <option value="#">1. Untuk Melamar Kerja</option>
+                        <option value="#">2. Sebagai Dokumen Tambahan untuk Pendidikan</option>
+                        <option value="#">3. Sebagai Keperluan Pendaftaran Beasiswa</option>
+                        <option value="#">4. Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lainnya">Lainnya</label>
+                    <input type="text" id="lainnya" name="lainnya" placeholder="Masukkan Keperluan Lainnya" required>
+                </div>
+            </div>
+            </form>
+
+            <div class="form-container-3">
+                <h4>Lampiran Berkas Pendukung</h4>
+                <form action="submit_pengajuan_surat.php" method="POST">
+                    <div class="input-group">
+                        <label for="ktp">Foto Identitas KTP</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Kartu Keluarga</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Akta Kelahiran</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Tagihan Listrik/Air</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto NPWP</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Surat Pernyataan Pindah (ditandatangani pemohon)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Akta nikah orang tua (Surat Keterangan Kelahiran)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Surat keterangan kematian dari rumah sakit</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Sertifikat tanah atau bukti kepemilikan tanah (Surat Keterangan Tanah)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Surat keterangan belum menikah (Surat Rekomendasi Nikah)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto kartu pelajar/mahasiswa (Surat Beasiswa)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Surat keterangan aktif dari sekolah/perguruan tinggi (Surat Beasiswa)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Surat keterangan kelahiran dari bidan/rumah sakit</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Tempat Usaha (Surat Keterangan Usaha)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Foto Surat keterangan dari sekolah (jika terkait pendidikan)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Bukti tambahan seperti slip gaji atau surat keterangan pekerjaan orang tua (SKTM)</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Pas Foto</label>
+                        <input type="file" id="photo" name="file_unggahan" accept="image/*" onchange="previewImage(event)"> 
+                    </div>
+            </form>
+          </div>
+          <button type="submit" class="btn-submit">Kirim Pengaduan</button>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

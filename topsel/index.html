@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Digital Desa Toapaya Selatan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="icon" href="logo.png" type="image/jpeg" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img" />
+      </div>
+
+      <div id="home" class="tab active">
+        <h1>Selamat Datang</h1>
+        <p class="sub-text">Di Website Resmi Layanan Digital Masyarakat Desa Toapaya Selatan</p>
+        <button class="btn" onclick="showTab('login')">Masuk</button>
+        <button class="btn" onclick="openComplaint()">Kirim Pengaduan Online</button>
+      </div>
+
+      <!-- Form Pengaduan -->
+      <div id="complaint" class="popup">
+        <div class="popup-content">
+          <h1>Kirim Pengaduan</h1>
+          <textarea id="complaint-text" placeholder="Tulis pengaduan Anda di sini..."></textarea>
+          <button class="btn" onclick="sendComplaint()">Kirim Pengaduan</button>
+          <button class="btn close" onclick="closePopup()">Kembali ke halaman awal?</button>
+        </div>
+      </div>
+
+      <!-- Konfirmasi Pengaduan Sukses -->
+      <div id="complaint-success" class="popup">
+        <div class="popup-content">
+          <h1>Terima Kasih</h1>
+          <p>Terimakasih telah mengirim pengaduan anda.</p>
+          <button class="btn close" onclick="goToHomePage()">OK</button>
+        </div>
+      </div>
+
+      <!-- Form Login -->
+      <form method="POST" action="login_process.php">
+        <div id="login" class="tab">
+          <h1>Login</h1>
+          <div class="input-group">
+            <label for="email"> <i data-feather="mail"></i> Email </label>
+            <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required />
+          </div>
+          <div class="input-group">
+            <label for="password"> <i data-feather="lock"></i> Password </label>
+            <input type="password" id="password" name="password" placeholder="Masukkan Password Anda" required />
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p class="link">
+            <a href="#" onclick="showTab('forgot-password')">Lupa Password?</a>
+          </p>
+          <p class="link">
+            <a href="#" onclick="showTab('home')">Kembali ke halaman awal</a>
+          </p>
+        </div>
+      </form>
+
+      <!-- Halaman Reset Password -->
+      <div id="forgot-password" class="tab">
+        <h1>Reset Password</h1>
+        <div class="input-group">
+          <label for="reset-email"> <i data-feather="mail"></i> Email </label>
+          <input type="email" id="reset-email" placeholder="Masukkan Email Anda" required />
+        </div>
+        <button class="btn" onclick="sendResetLink()">Kirim link reset Password</button>
+        <p class="link">
+          <a href="#" onclick="showTab('login')">Kembali ke halaman login</a>
+        </p>
+      </div>
+
+      <footer>
+        <p>&copy; 2024 Desa Toapaya Selatan. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
