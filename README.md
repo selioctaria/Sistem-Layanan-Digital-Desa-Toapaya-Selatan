@@ -22,3 +22,5 @@ Website ini dirancang untuk mendukung layanan digital di Desa Toapaya Selatan, K
   - Visual Studio Code (editor kode)
 
 ## 📂 Struktur Direktori
+![image](https://github.com/user-attachments/assets/c90455b1-95a0-4261-be9e-391427396582)
+
